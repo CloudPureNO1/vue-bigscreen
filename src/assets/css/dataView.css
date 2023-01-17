@@ -1,0 +1,285 @@
+/* 约束屏幕尺寸 */
+@media screen and (max-width: 1080px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 80px !important;
+  }
+}
+@font-face {
+  font-family: electronicFont;
+  src: url(../font/DS-Digital.ttf);
+}
+.main-data-views {
+  line-height: 1.15;
+  background: url(../images/bg.jpg) no-repeat top center;
+}
+.main-data-views .header {
+  height: 1.25rem;
+  background: url(../images/head_bg.png) no-repeat;
+  background-size: 100%;
+}
+.main-data-views .header h1 {
+  font-size: 0.475rem;
+  color: #fff;
+  text-align: center;
+  line-height: 1rem;
+}
+.main-data-views .main-box {
+  min-width: 1024px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0.125rem 0.125rem 0;
+  display: flex;
+  /**
+        .column:nth-child(2){
+      flex:10;
+    }
+    等同于
+    .column{
+      &:nth-child(2){
+        flex:10;
+      }
+    }
+    */
+}
+.main-data-views .main-box .column {
+  flex: 7;
+}
+.main-data-views .main-box .column:nth-child(2) {
+  flex: 10;
+  margin: 0 0.125rem 0.1875rem;
+  overflow: hidden;
+}
+.main-data-views .main-box .panel {
+  position: relative;
+  height: 3.875rem;
+  border: 1px solid rgba(25, 186, 139, 0.17);
+  background: url(../images/line.png) rgba(255, 255, 255, 0.03);
+  padding: 0 0.1875rem 0.5rem;
+  margin-bottom: 0.1875rem;
+}
+.main-data-views .main-box .panel::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #02a6b5;
+  border-top: 2px solid #02a6b5;
+  content: '';
+}
+.main-data-views .main-box .panel::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #02a6b5;
+  border-top: 2px solid #02a6b5;
+  content: '';
+}
+.main-data-views .main-box .panel .panel-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.main-data-views .main-box .panel .panel-footer::before {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  border-left: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
+  content: '';
+}
+.main-data-views .main-box .panel .panel-footer::after {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  right: 0;
+  border-right: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
+  content: '';
+}
+.main-data-views .main-box .panel .title .title-content {
+  display: flex;
+  justify-content: center;
+  height: 0.6rem;
+  color: #fff;
+  line-height: 0.6rem;
+  text-align: center;
+  font-size: 0.25rem;
+  font-weight: 400;
+}
+.main-data-views .main-box .panel .title .title-content .item {
+  width: auto;
+}
+.main-data-views .main-box .panel .title .title-content .item span {
+  color: #a7a7a7;
+  text-decoration: none;
+}
+.main-data-views .main-box .panel .title .title-content .item span:hover {
+  color: #fff;
+}
+.main-data-views .main-box .panel .title .title-content .item .active {
+  color: #fff;
+}
+.main-data-views .main-box .panel .title .title-content .btn {
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #4a48ec;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: skew(-35deg);
+}
+.main-data-views .main-box .panel .title h2 {
+  height: 0.6rem;
+  color: #fff;
+  line-height: 0.6rem;
+  text-align: center;
+  font-size: 0.25rem;
+  font-weight: 400;
+}
+.main-data-views .main-box .panel .title h2 a {
+  color: #a7a7a7;
+  text-decoration: none;
+  margin: 0 0.125rem;
+}
+.main-data-views .main-box .panel .title h2 .a-active {
+  color: #fff;
+}
+.main-data-views .main-box .panel .title h2 a:hover {
+  color: #483ce9;
+}
+.main-data-views .main-box .panel .content {
+  height: 3rem;
+  background: rgba(84, 54, 177, 0.08);
+}
+.main-data-views .main-box .panel-num {
+  background-color: rgba(101, 132, 226, 0.1);
+  padding: 0.1875rem;
+}
+.main-data-views .main-box .panel-num .panel-num-header {
+  position: relative;
+  border: 1px solid rgba(25, 186, 139, 0.17);
+}
+.main-data-views .main-box .panel-num .panel-num-header::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 10px;
+  border-left: 2px solid #02a6b5;
+  border-top: 2px solid #02a6b5;
+  content: '';
+}
+.main-data-views .main-box .panel-num .panel-num-header::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 10px;
+  border-right: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
+  content: '';
+}
+.main-data-views .main-box .panel-num .panel-num-header ul {
+  display: flex;
+}
+.main-data-views .main-box .panel-num .panel-num-header ul li {
+  position: relative;
+  flex: 1;
+  line-height: 1rem;
+  font-size: 0.625rem;
+  color: #ffeb7b;
+  text-align: center;
+  font-family: electronicFont;
+}
+.main-data-views .main-box .panel-num .panel-num-header ul li:first-child::after {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  height: 50%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  content: '';
+}
+.main-data-views .main-box .panel-num .panel-num-body ul {
+  display: flex;
+}
+.main-data-views .main-box .panel-num .panel-num-body ul li {
+  flex: 1;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.25rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  padding-top: 0.125rem;
+}
+.main-data-views .main-box .panel-map {
+  position: relative;
+  height: 10.125rem;
+}
+.main-data-views .main-box .panel-map .map-bg1 {
+  width: 6.475rem;
+  height: 6.475rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../images/map.png);
+  background-size: 100% 100%;
+  opacity: 0.3;
+}
+.main-data-views .main-box .panel-map .map-bg2 {
+  width: 8.0375rem;
+  height: 8.0375rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../images/lbx.png) no-repeat;
+  background-size: 100% 100%;
+  animation: map-bg2-rotate 15s linear infinite;
+  opacity: 0.6;
+}
+.main-data-views .main-box .panel-map .map-bg3 {
+  width: 7.075rem;
+  height: 7.075rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../images/jt.png) no-repeat;
+  background-size: 100% 100%;
+  animation: map-bg3-rotate 15s linear infinite;
+  opacity: 0.4;
+}
+.main-data-views .main-box .panel-map .content {
+  top: 0;
+  left: 0;
+  height: 10.125rem;
+  width: 100%;
+}
+@keyframes map-bg2-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes map-bg3-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
